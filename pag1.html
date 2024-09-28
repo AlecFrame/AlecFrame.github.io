@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Efecto Parallax</title>
+    <style>
+        /* Estilos para la sección con el efecto parallax */
+        .parallax {
+            height: 500px; /* Altura de la sección */
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Imagen de fondo */
+            background-attachment: fixed; /* Fija la imagen de fondo para el efecto parallax */
+            background-size: cover; /* Ajusta la imagen al contenedor */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            position: relative; /* Para crear un contexto de apilamiento */
+        }
+
+        /* Secciones de contenido para probar el efecto parallax */
+        .content {
+            height: 600px; /* Altura de la sección de contenido */
+            background-color: #f2f2f2; /* Color de fondo para contraste */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Contenido inicial -->
+    <div class="content">
+        Contenido normal
+    </div>
+
+    <!-- Sección con efecto parallax -->
+    <div class="parallax"></div>
+
+    <!-- Más contenido para probar el efecto -->
+    <div class="content">
+        Más contenido normal
+    </div>
 </body>
 </html>
