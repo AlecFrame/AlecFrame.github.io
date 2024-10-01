@@ -1,42 +1,26 @@
 let i = 0;
-let imagenes = document.querySelectorAll("section img");
+let imagenes = document.querySelectorAll(".fondo");
+let textos = document.querySelectorAll(".pack-texto");
+
+console.log(imagenes)
+console.log(textos)
+
 let total = imagenes.length;
 
 function imagenSiguiente() {
-    console.log("activando");
     imagenes[i].classList.remove("activo");
+    textos[i].classList.remove("activo");
     i = (i+1) % total;
     imagenes[i].classList.add("activo");
+    textos[i].classList.add("activo");
 }
 
 setInterval(imagenSiguiente, 6000);
 
-const textoElemento = document.getElementById("texto");
-const texto = textoElemento.textContent;
-let pes = document.querySelectorAll(".carrusel div p");
-console.log(pes)
-textoElemento.textContent = "";
-
-let a = 0;
-let b = 0;
-
-function ejecutarPuntos() {
-    if (b < pes.length) {
-        pes[b].classList.add("activo");
-        b++;
-        setTimeout(ejecutarPuntos, 500);
-    }
+function imagenAnterior() {
+    imagenes[i].classList.remove("activo");
+    textos[i].classList.remove("activo");
+    if (i-1<0) {i=(imagenes.length-1)}else{i=i-1}
+    imagenes[i].classList.add("activo");
+    textos[i].classList.add("activo");
 }
-
-function mostrarTexto() {
-    textoElemento.classList.add("activo");
-    if (a < texto.length) {
-        textoElemento.textContent += texto.charAt(a);
-        a++;
-        setTimeout(mostrarTexto, 35);
-    }else
-        setTimeout(ejecutarPuntos, 400);
-}
-
-
-window.onload = mostrarTexto

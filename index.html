@@ -9,28 +9,40 @@
     <script src="principal.js" defer></script>
 </head>
 <body>
-    <div class="MenuBar">
-        <div>
-            <img src="recursos/iconoEmpresarial.png" alt="icono">
+    <header class="MenuBar">
+        <div class="Menu-izquierda">
+            <img src="recursos/iconoEmpresarial.png" alt="icono" class="Menu-icono">
         </div>
-        <section>
-            <a href="pag1.html">MÁS INFORMACIÓN</a>
-            <a href="pag2.html">CUENTA</a>
-        </section>
-    </div>
+        <div class="Menu-derecha">
+            <a href="pag1.html" class="Menu-botones">MÁS INFORMACIÓN</a>
+            <a href="pag2.html" class="Menu-botones">CUENTA</a>
+        </div>
+    </header>
     <section class="carrusel">
-        <img src="recursos/carga3.png" alt="no cargado" class="activo">
-        <img src="recursos/carga1.png" alt="no cargado">
-        <img src="recursos/carga2.png" alt="no cargado">
-        <img src="recursos/carga4.png" alt="no cargado">
-        <div>
-            <h2 id="texto" class="textoPrincipal">TE PRESENTO LA PAGINA OFICIAL DE CARGAMELA</h2>
-            <p class="textoPrincipal">* Una empresa de carga y descarga de materiales de construccion</p>
-            <p class="textoPrincipal">* Donde poseemos todos los materiales que necesites</p>
-            <p class="textoPrincipal">* Donde encontraras los precios mas COMPETITIVOS del mercado</p>
-            <p class="textoPrincipal">* Envio a todos lados, desde la surcunsal hasta tu CÁMA tu decides</p>
-            <p class="textoPrincipal">* Donde Toreto estaria orgulloso de nuestra FAMILIA</p>
-            <p class="textoPrincipal">Qué esperas, segúro tenemos lo que necesitas</p>
+        <div id="imagen">
+            <img src="recursos/carga3.png" alt="no cargado" class="fondo activo">
+            <img src="recursos/carga1.png" alt="no cargado" class="fondo">
+            <img src="recursos/carga2.png" alt="no cargado" class="fondo">
+            <img src="recursos/carga4.png" alt="no cargado" class="fondo">
+        </div>
+        <div class="carrusel-texto">
+            <section class="pack-texto activo">
+                <h2 class="textos">TE PRESENTO LA PÁGINA OFICIAL DE CARGAMELA</h2>
+                <p class="textos">Una empresa de compra, carga y descarga de materiales de construccion</p>
+            </section>
+            <section class="pack-texto">
+                <p class="textos">Aqui encontraras los precios mas COMPETITIVOS del mercado con todos los materiales que necesites</p>
+            </section>
+            <section class="pack-texto">
+                <p class="textos">Envio a todos lados, desde la surcunsal hasta tu CÁMA tu decides</p>
+            </section>
+            <section class="pack-texto">
+                <p class="textos">Donde Toreto estaria orgulloso de nuestra FAMILIA, Qué esperas, segúro tenemos lo que necesitas</p>
+            </section>
+        </div>
+        <div id="botones">
+            <img class="flechas" src="recursos/flecha_izquierda.png" onclick="imagenAnterior()" alt="flecha_izquierda">
+            <img class="flechas" src="recursos/flecha_derecha.png" onclick="imagenSiguiente()" alt="flecha_izquierda">
         </div>
     </section>
     <div id="pie" class="pie">

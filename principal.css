@@ -1,69 +1,61 @@
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 .MenuBar {
     position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
     display: flex;
-    width: 98%;
-    height: 60px;
     background-color: rgb(255, 217, 0);
     justify-content: space-between;
-    padding: 1px 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-.MenuBar div {
-    display: inline-flex;
-    height: 60px;
-    width: 250px;
-    justify-content: center;
     align-items: center;
-    margin: 0;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-.MenuBar div img {
-    height: 100%;
-    width: 100%;
-}
-.MenuBar section {
-    justify-content: flex-end;
-}
-.MenuBar section a {
-    display:inline-flex;
-    border: none;
-    border-left: 1px black solid;
-    border-right: 1px black solid;
-    border-color: black;
-    border-radius: 2%;
-    height: 60px;
-    width: auto;
-    padding: 0 25px;
-    margin-left: 10px;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    box-shadow: 0 0 5px rgba(0,0,0,0);
-    transition: color 0.1s, border-color 0.1s, box-shadow 0.1s;
-    
-}
-.MenuBar section a:hover {
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 10px 20px;
     color: white;
-    border-color: white;
 }
+
+.Menu-icono {
+    width: auto;
+    height: 60px;
+}
+
+.Menu-botones {
+    background-color: #474747;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Menu-botones:hover {
+    background-color: #585858;
+}
+
+.Menu-izquierda {
+    display: flex;
+    align-items: center;
+}
+
+.Menu-derecha {
+    display: flex;
+}
+
 .carrusel {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     position: relative;
     height: 800px;
     width: 100%;
     padding: 0;
     margin: 0 auto;
 }
-.carrusel img {
+
+.fondo {
     position: absolute;
     overflow: hidden;
     height: 100%;
@@ -74,33 +66,74 @@ body {
     object-fit: cover;
     transition: opacity 2s ease-in-out;
 }
-.carrusel div {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    position: absolute;
-    display: block;
-    width: 50%;
-    margin: 0;
-    margin-left: 25%;
-    padding: 10px 10px;
-    text-align: center;
-    margin-top: 15%;
-    border-radius: 15%;
-}
-.textoPrincipal {
-    color: white;
-    font-family: sans-serif;
-    font-weight: 900;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-.textoPrincipal.activo {
-    opacity: 1;
-}
 
 img.activo {
     opacity: 1;
 }
+
+/* Aqui empieza el texto*/
+
+.carrusel-texto {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 30%, transparent 100%);
+    color: white;
+}
+
+.pack-texto {
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.pack-texto.activo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.textos {
+    position: relative;
+    top: -60px;
+    width: 60%;
+}
+
+h2.textos {
+    font-weight: 900;
+}
+
+p.textos {
+    font-weight: bold;
+}
+
+#botones {
+    position: absolute;
+    width: 30%;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flechas {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s;
+}
+
+.flechas:hover {
+    background-color: rgb(117, 117, 117);
+}
+
 .pie {
     background-color: rgb(29, 29, 29);
     width: 100%;
