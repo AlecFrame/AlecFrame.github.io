@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CargamelaSanLuis-cuentas</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="cuenta.css">
+    <script src="cuenta.js" defer></script>
 </head>
 <body>
-    
+    <header class="MenuBar">
+        <div class="Menu-izquierda">
+            <a href="index.html">
+                <img src="recursos/iconoEmpresarial.png" alt="icono" class="Menu-icono">
+            </a>
+        </div>
+        <div class="Menu-derecha">
+            <a href="pag1.html" class="Menu-botones">MÁS INFORMACIÓN</a>
+            <a href="pag2.html" class="Menu-botones">CUENTA</a>
+        </div>
+    </header>
+    <div class="contenedor">
+        <section id="carta" class="carta">
+            <h2>Iniciar Sesión</h2>
+            <form action="" novalidate>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/usuario.png" alt="icono">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/email.png" alt="icono">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/candado.png" alt="icono">
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                </div>
+                <br>
+                <div class="cont-botones">
+                    <button id="Registrar" value="Registrar" class="Form-botones">Registrarse</button>
+                    <button id="ingresar" value="ingresar" class="Form-botones ingresar">Ingresar</button>
+                </div>
+            </form>
+        </section>
+    </div>
 </body>
 </html>

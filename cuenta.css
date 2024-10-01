@@ -1,0 +1,98 @@
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.carta {
+    position: relative;
+    top: 100px;
+    background-color: rgb(255, 217, 0);
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    padding: 30px 70px 0 70px;
+    box-shadow: 0 0 15px black;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.carta.activo {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.carta h2 {
+    border: 0;
+    border-bottom: 3px black solid;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    position: relative;
+    height: 300px;
+    box-sizing: border-box;
+    top: 10px;
+}
+
+.input-grupo {
+    font-size: 20px;
+    margin: 15px 0;
+    width: 100%;
+    height: 45px;
+}
+
+.input-grupo input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.icono {
+    position: absolute;
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+.cont-botones {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Form-botones {
+    background-color: #474747;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 15px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.Form-botones:hover {
+    background-color: #585858;
+}
+
+.Form-botones.ingresar {
+    background-color: #117a28;
+}
+
+.Form-botones:hover.ingresar {
+    background-color: #14a333;
+}
