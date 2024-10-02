@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function activarRegistro() {
     let carta = document.getElementById("carta-registro");
+    nombre_registro.classList.remove("error");
+    email_registro.classList.remove("error");
+    tel_registro.classList.remove("error");
+    contra_registro.classList.remove("error");
+    nombre.classList.remove("error");
+    contra.classList.remove("error");
+    if (cuadro_error!=null) {
+        cuadro_error.remove();
+        cuadro_error = null;
+    }
     if (carta.classList.contains("activo")) {
         carta.classList.remove("activo");
     }else
