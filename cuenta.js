@@ -225,4 +225,6 @@ class Usuario {
     }
 }
 
-let lista = [new Usuario("Alexander","Alex@gmail.com","","pepe")];
+let lista = [new Usuario("Alexander","Alex@gmail.com","","pepe"),
+    new Usuario("Patricia","Patricia@gmail.com","","papa")
+];
