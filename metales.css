@@ -30,27 +30,35 @@ body {
 .titulo {
     background-color: rgb(27,27,27);
     color: white;
-    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    align-items: center;
     text-align: center;
 }
 
 .contenido {
     display: flex;
-    padding: 2px 50px;
+    flex-wrap: wrap;
+    height: auto;
+    width: 95%;
+    box-sizing: border-box;
     justify-content: space-between;
 }
 
 .producto {
     background-color: rgb(255, 217, 0);
     box-shadow: 0 0 10px black;
+    height: fit-content;
     padding: 5px 5px 10px 5px;
     border-radius: 10px;
     border: 2px rgb(255, 217, 0) solid;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .producto:hover {
+    transform: scale(1.2);
     background-color: white;
 }
 
@@ -64,7 +72,13 @@ body {
 .producto p {
     text-align: left;
     color: black;
+    
     margin: 0;
     font-size: 14px;
     font-weight: 600;
+}
+
+.pata {
+    height: 50px;
+    background-color: rgb(27,27,27);
 }
