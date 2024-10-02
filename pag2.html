@@ -21,25 +21,50 @@
         </div>
     </header>
     <div class="contenedor">
+        <p id="bienvenida">- Bienvenido a CargaMela -</p>
         <section id="carta" class="carta">
-            <h2>Iniciar Sesión</h2>
+            <h2 class="titulo">Iniciar Sesión</h2>
             <form action="" novalidate>
                 <div class="input-grupo">
                     <img class="icono" src="recursos/usuario.png" alt="icono">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                </div>
-                <div class="input-grupo">
-                    <img class="icono" src="recursos/email.png" alt="icono">
-                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre de Usuario o Email">
                 </div>
                 <div class="input-grupo">
                     <img class="icono" src="recursos/candado.png" alt="icono">
-                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                    <input type="password" name="contra" id="contra" placeholder="Contraseña">
+                </div>
+                <p id="mensaje_error">* ¿Usted se ha registrado? si no pulse el botón Registrar aqui abajo</p>
+                <br>
+                <div class="cont-botones">
+                    <button type="button" class="Form-botones" onclick="activarRegistro()">Registrarse</button>
+                    <button type="button" class="Form-botones ingresar" onclick="ValidarSesion()">Ingresar</button>
+                </div>
+            </form>
+        </section>
+        <section id="carta-registro" class="carta registro">
+            <h2 class="titulo">Registrarse</h2>
+            <form action="" novalidate>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/usuario.png" alt="icono">
+                    <input type="text" name="nombre_registro" id="nombre_registro" placeholder="Nombre de Usuario">
+                </div>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/email.png" alt="icono">
+                    <input type="text" name="email_registro" id="email_registro" placeholder="Email">
+                </div>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/telefono.png" alt="icono">
+                    <label for="tel_registro" class="tel">+54 9 </label>
+                    <input type="text" class="tele" name="tel_registro" id="tel_registro" placeholder="[266 412 1234] teléfono - opcional">
+                </div>
+                <div class="input-grupo">
+                    <img class="icono" src="recursos/candado.png" alt="icono">
+                    <input type="password" name="contra_registro" id="contra_registro" placeholder="Contraseña">
                 </div>
                 <br>
                 <div class="cont-botones">
-                    <button id="Registrar" value="Registrar" class="Form-botones">Registrarse</button>
-                    <button id="ingresar" value="ingresar" class="Form-botones ingresar">Ingresar</button>
+                    <button type="button" class="Form-botones" onclick="activarRegistro()">Cancelar</button>
+                    <button type="button" class="Form-botones ingresar" onclick="ValidarRegistro()">Registrarse</button>
                 </div>
             </form>
         </section>
