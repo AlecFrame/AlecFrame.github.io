@@ -46,10 +46,11 @@ body {
     border-radius: 10px;
     border: 2px rgb(255, 217, 0) solid;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .producto:hover {
+    transform: scale(1.2);
     background-color: white;
 }
 
