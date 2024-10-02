@@ -1,0 +1,70 @@
+body {
+    background-image: url("recursos/albanil-preparando-mortero-para-pegar-ladrillos_02.jpg");
+    background-color: #f2f2f2;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.presentacion {
+    height: 400px;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(252, 244, 164);
+    text-shadow: 2px 2px 2px #000;
+}
+
+.presentacion p {
+    width: 80%;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+}
+.titulo {
+    background-color: rgb(27,27,27);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.contenido {
+    display: flex;
+    padding: 2px 50px;
+    justify-content: space-between;
+}
+
+.producto {
+    background-color: rgb(255, 217, 0);
+    box-shadow: 0 0 10px black;
+    padding: 5px 5px 10px 5px;
+    border-radius: 10px;
+    border: 2px rgb(255, 217, 0) solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto:hover {
+    background-color: white;
+}
+
+.producto img {
+    height: 150px;
+    width: 150px;
+    border: 2px rgb(255, 217, 0) solid;
+    border-radius: 10px;
+}
+
+.producto p {
+    text-align: left;
+    color: black;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
