@@ -146,8 +146,8 @@ p.textos {
 .img{
     padding: 0px;
     margin: 0%;
-    width: 50%;
-    height: auto;
+    width: 350px;
+    height: 300px;
     display:inline;
     position: relative;
 }
@@ -162,5 +162,11 @@ td{
     padding: 0px;
     margin: 5%;
     text-align: center;
-    font-size: small;
+    font-size: medium;
+}
+
+h3{
+    background-color: black;
+    padding: 50px;
+    text-align: center;
 }
