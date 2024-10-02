@@ -5,43 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CargamelaSanLuis-mas-informacion</title>
     <link rel="stylesheet" href="principal.css">
-    <style>
-        /* Esto solo es un ejemplo si quieres puedes eliminar todo el style y body para empezar de nuevo */
-        .parallax {
-            height: 80px; /* Altura de la sección */
-            background-image: url('https://www.freepik.es/foto-gratis/diseno-gradiente-geometrico-fondo-negro_134344840.htm#query=cuadrado%20negro&position=4&from_view=keyword&track=ais_hybrid&uuid=a7702f6f-b10d-444d-b9a7-995eca0dc49a'); /* Imagen de fondo */
-            background-attachment: fixed; /* Fija la imagen de fondo para el efecto parallax */
-            background-size: cover; /* Ajusta la imagen al contenedor */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            position: relative; /* Para crear un contexto de apilamiento */
-            color: rgb(252, 244, 164);
-            text-align: center;
-            padding: 30px;
-        }
-
-        /* Secciones de contenido para probar el efecto parallax */
-        .content {
-            height: 250px; /* Altura de la sección de contenido */
-            background-image: url("recursos/albanil-preparando-mortero-para-pegar-ladrillos_02.jpg");
-            background-color: #f2f2f2; /* Color de fondo para contraste */
-            background-attachment: fixed; /* Fija la imagen de fondo para el efecto parallax */
-            background-size: cover; /* Ajusta la imagen al contenedor */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            position: relative; /* Para crear un contexto de apilamiento */
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            text-align: center;
-            color: rgb(252, 244, 164);
-            text-shadow: 2px 2px 2px #000;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="matSecos.css">
 </head>
 <body>
-    <header class="MenuBar"> <!-- El header es la barra de menu superior-->
+    <header class="MenuBar"> 
         <div class="Menu-izquierda">
             <a href="index.html">
                 <img src="recursos/iconoEmpresarial.png" alt="icono" class="Menu-icono">
@@ -52,7 +19,7 @@
             <a href="pag2.html" class="Menu-botones">CUENTA</a>
         </div>
     </header>
-    <div class="content">
+    <div class="presentacion">
         <br>
         <br>
         <p>Los materiales son esenciales en cada proyecto de construcción. Aquí te presentamos los principales materiales secos como cemento, revoque fino con ceresita, revoque fino para interiores y además fabricamos una amplia variedad de ladrillos que se adaptan a distintos propósitos, requisitos y estilos finales de la obra. 
@@ -61,38 +28,63 @@
             A continuación podrás ver nuestros productos:</p>
     </div>
 
-    <div class="parallax">
-        <h1>LADRILLOS</h1>
-
+    <div class="titulo">
+        <h1> Ladrillos</h1>
+        <div class="contenido">
+            <section class="producto">
+                <img src= "recursos/comun.jpg" class="img" alt="producto">
+                <p>Ladrillo Cocido</p>
+                <p>Precio: $1000</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/refractario.jpg" class="img" alt="producto">
+                <p>Ladrillo Refractario</p>
+                <p>Precio: $1800</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/portante.jpg" alt="producto">
+                <p>Ladrillo Hueco Portante</p>
+                <p>Precio: $1350</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/huecofino.jpg" class="img" alt="producto">
+                <p>Ladrillo Hueco (8x18x33)</p>
+                <p>Precio: $800</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/huecoancho.jpg" alt="producto">
+                <p>Ladrillo Hueco (12x18x33)</p>
+                <p>Precio: $1200</p>
+            </section>
+        </div>
+        <h1>Cementos y Revoques</h1>
+        <div class="contenido">
+            <section class="producto">
+                <img src= "recursos/cemento.jpg" class="img" alt="producto">
+                <p>Cemento Protland</p>
+                <p>Precio: $8500</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/finocere.jpg" class="img" alt="producto">
+                <p>Revoque fino c/ceresita</p>
+                <p>Precio: $7000</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/finoext.jpg" alt="producto">
+                <p>Revoque fino exterior</p>
+                <p>Precio: $5000</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/finoimperm.jpg" class="img" alt="producto">
+                <p>Pegamento cerámico</p>
+                <p>Precio: $7500</p>
+            </section>
+            <section class="producto">
+                <img src= "recursos/finoIn.jpg" alt="producto">
+                <p>Revoque fino interior</p>
+                <p>Precio: $6450</p>
+            </section>
+        </div>
     </div>
-
-    <div class="content">
-        <div>
-            <table>
-                <tr>
-                    <th>Ladrillo Cocido</th>
-                    <th>Ladrillo Refractario</th>
-                    <th>Ladrillo Hueco Portante</th>
-                    <th>Ladrillo Hueco (8x18x33)</th>
-                    <th>Ladrillo Hueco (12x18x33)</th>
-                </tr>
-                <tr>
-                    <td><img src= "recursos/comun.jpg" class="img"></td>
-                    <td><img src= "recursos/refractario.jpg" class="img"></td>
-                    <td><img src= "recursos/portante.jpg" class="img"></td>
-                    <td><img src= "recursos/huecofino.jpg" class="img"></td>
-                    <td><img src= "recursos/huecoancho.jpg" class="img"></td>
-                </tr>
-                <tr>
-                    <td>Precio por unidad: $1000</td>
-                    <td>Precio por unidad: $1800</td>
-                    <td>Precio por unidad: $1350</td>
-                    <td>Precio por unidad: $800</td>
-                    <td>Precio por unidad: $1300</td>
-                </tr>
-            </table>
-    </div>
-
-    <h3>CEMENTOS Y REVOQUES</h3>
 </body>
 </html>

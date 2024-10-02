@@ -8,24 +8,33 @@
     <style>
         /* Esto solo es un ejemplo si quieres puedes eliminar todo el style y body para empezar de nuevo */
         
-
-        /* Secciones de contenido para probar el efecto parallax */
-        .content {
-            height: 600px; /* Altura de la sección de contenido */
-            background-image: url("recursos/construccion.jpg");
+        .back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        }
+        .back img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+        /* Secciones de contenido para probar el efecto parallax */
+        .content {
+            height: 600px; /* Altura de la sección de contenido */
             position: relative;
-            background-color: #f2f2f2;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
-            
+            background: opacity 0.5em; ;
         }
-        
+                
     </style>
 </head>
 <body>
@@ -40,17 +49,14 @@
             <a href="pag2.html" class="Menu-botones">CUENTA</a>
         </div>
     </header>
+    <div class="back">
+        <img src="recursos/construccion.jpg" alt="img"> 
+    </div>
     <div class="content">
-        <a href="pag3solid.html" class="Menu-botones">MATERIALES SECOS Y LADRILLOS</a>
+        <a href="pag3solid.html" class="Menu-botones-boton-claro">MATERIALES SECOS Y LADRILLOS</a>
         
         <a href="pag4metales.html" class="Menu-botones">METALES</a>
     </div>
-<!--
-    <div class="parallax"></div>
 
-    <div class="content">
-        Ejemplos o ideas
-    </div>
-    -->
 </body>
 </html>
