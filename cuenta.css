@@ -158,13 +158,20 @@ form {
 }
 
 #mensaje_error {
-    color: red;
-    font-size: 14px;
+    background-color: rgb(199, 23, 23);
+    border-radius: 8px;
+    padding: 2px;
+    border: 2px rgb(100, 0, 0) solid;
+    color: rgb(253, 238, 238);
+    font-size: 12px;
     font-weight: 600;
+    transform: translateY(-10px);
     opacity: 0;
+    transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 #mensaje_error.activo {
+    transform: translateY(0);
     opacity: 1;
 }
 

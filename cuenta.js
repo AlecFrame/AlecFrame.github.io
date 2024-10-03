@@ -11,6 +11,7 @@ function activarRegistro() {
     contra_registro.classList.remove("error");
     nombre.classList.remove("error");
     contra.classList.remove("error");
+    mensaje.classList.remove("activo");
     if (cuadro_error!=null) {
         cuadro_error.remove();
         cuadro_error = null;
@@ -157,18 +158,34 @@ function ValidarSesion() {
         cuadro_error = null;
     }
     CrearCuadro(nombre,nombre.value=="","Tiene que ingresar su nombre de usuario o email en este campo.",er_nombre);
-    CrearCuadro(contra,contra.value=="","Tiene que crear una contraseña",er_contra);
+    CrearCuadro(contra,contra.value=="","Tiene que ingresar su contraseña",er_contra);
 
     BuscarEnLista();
 }
 
 function BuscarEnLista() {
+    let nombre_valido = false;
+    let contra_valida = false;
+    let usuario = 0;
     if (lista.length>0) {
         if (!er_nombre.value&&!er_contra.value)
-            for (let i=0; i<lista.length; i++) {
+            for (let i=0; (i<lista.length&&!(nombre_valido&&contra_valida)); i++) {
                 if ((nombre.value==lista[i].nombre||nombre.value==lista[i].email)&&contra.value==lista[i].contra) {
-                    er_listado.value=false;
+                    nombre_valido=true;
+                    contra_valida=true;
+                    usuario = i;
+                }else
+                if ((nombre.value==lista[i].nombre||nombre.value==lista[i].email)) {
+                    nombre_valido=true;
+                }else
+                if (contra.value==lista[i].contra) {
+                    contra_valida=true;
                 }
+            }
+            CrearCuadro(nombre,(!nombre_valido&&contra_valida),"El nombre de Usuario o Email son incorrectos.",er_nombre);
+            CrearCuadro(contra,(!contra_valida&&nombre_valido),"La contraseña es incorrecta",er_contra);
+            if (nombre_valido&&contra_valida) {
+                er_listado.value = false;
             }
     }
     
