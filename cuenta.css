@@ -188,3 +188,9 @@ form {
 #bienvenida.activo {
     opacity: 1;
 }
+
+.parrafo {
+    margin-bottom: 4px;
+    margin-left: 20px;
+    font-size: 16px;
+}

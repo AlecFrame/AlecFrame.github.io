@@ -147,6 +147,10 @@ const nombre = document.getElementById("nombre");
 const contra = document.getElementById("contra");
 const mensaje = document.getElementById("mensaje_error");
 const bienvenida = document.getElementById("bienvenida");
+const titulo = document.getElementById("titulobienvenida");
+let pp = 0;
+let index_lista = 0;
+let listas = [];
 er_listado = {value:true};
 
 function ValidarSesion() {
@@ -174,6 +178,7 @@ function BuscarEnLista() {
                     nombre_valido=true;
                     contra_valida=true;
                     usuario = i;
+                    index_lista = usuario;
                 }else
                 if ((nombre.value==lista[i].nombre||nombre.value==lista[i].email)) {
                     nombre_valido=true;
@@ -205,6 +210,20 @@ function IniciarSesion() {
     bienvenida.classList.add("activo");
     console.log(lista);
     setTimeout(function() {carta.style.transform = "translateX(-1500px)";}, 1000);
+    listas[pp] = document.createElement("p");
+    if (lista[index_lista].tel.trim()=="") {
+        listas[pp].innerHTML =
+            "Nombre: " + lista[index_lista].nombre + "<br>" +
+            "Email: " + lista[index_lista].email;
+    } else {
+        listas[pp].innerHTML =
+            "Nombre: " + lista[index_lista].nombre + "<br>" +
+            "Email: " + lista[index_lista].email + "<br>" +
+            "Teléfono: " + lista[index_lista].tel;
+    }
+    listas[pp].classList.add("parrafo");
+    titulo.insertAdjacentElement("afterend", listas[pp]);
+    pp++;
 }
 
 nombre.addEventListener('focus', function() {
